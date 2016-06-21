@@ -10,55 +10,55 @@ class BobTest < Minitest::Test
     "Bob hears #{text.inspect}, and.."
   end
 
-  def test_stating_something
-    remark = 'Tom-ay-to, tom-aaaah-to.'
-    assert_equal 'Whatever.', bob.hey(remark), feedback(remark)
-  end
-
-  def test_shouting
-    remark = 'WATCH OUT!'
-    assert_equal 'Whoa, chill out!', bob.hey(remark), feedback(remark)
-  end
-
-  def test_shouting_gibberish
-    remark = ('A'..'Z').to_a.shuffle[0, 10].join
-    assert_equal 'Whoa, chill out!', bob.hey(remark), feedback(remark)
-  end
-
-  def test_asking_a_question
-    remark = 'Does this cryogenic chamber make me look fat?'
-    assert_equal 'Sure.', bob.hey(remark), feedback(remark)
-  end
-
-  def test_asking_a_numeric_question
-    remark = 'You are, what, like 15?'
-    assert_equal 'Sure.', bob.hey(remark), feedback(remark)
-  end
-
-  def test_asking_gibberish
-    remark = ('a'..'z').to_a.shuffle[0, 10].join << '?'
-    assert_equal 'Sure.', bob.hey(remark), feedback(remark)
-  end
-
-  def test_talking_forcefully
-    remark = "Let's go make out behind the gym!"
-    assert_equal 'Whatever.', bob.hey(remark), feedback(remark)
-  end
-
-  def test_using_acronyms_in_regular_speech
-    remark = "It's OK if you don't want to go to the DMV."
-    assert_equal 'Whatever.', bob.hey(remark), feedback(remark)
-  end
-
-  def test_forceful_questions
-    remark = 'WHAT THE HELL WERE YOU THINKING?'
-    assert_equal 'Whoa, chill out!', bob.hey(remark), feedback(remark)
-  end
-
-  def test_shouting_numbers
-    remark = '1, 2, 3 GO!'
-    assert_equal 'Whoa, chill out!', bob.hey(remark), feedback(remark)
-  end
+  # def test_stating_something
+  #   remark = 'Tom-ay-to, tom-aaaah-to.'
+  #   assert_equal 'Whatever.', bob.hey(remark), feedback(remark)
+  # end
+  #
+  # def test_shouting
+  #   remark = 'WATCH OUT!'
+  #   assert_equal 'Whoa, chill out!', bob.hey(remark), feedback(remark)
+  # end
+  #
+  # def test_shouting_gibberish
+  #   remark = ('A'..'Z').to_a.shuffle[0, 10].join
+  #   assert_equal 'Whoa, chill out!', bob.hey(remark), feedback(remark)
+  # end
+  #
+  # def test_asking_a_question
+  #   remark = 'Does this cryogenic chamber make me look fat?'
+  #   assert_equal 'Sure.', bob.hey(remark), feedback(remark)
+  # end
+  #
+  # def test_asking_a_numeric_question
+  #   remark = 'You are, what, like 15?'
+  #   assert_equal 'Sure.', bob.hey(remark), feedback(remark)
+  # end
+  #
+  # def test_asking_gibberish
+  #   remark = ('a'..'z').to_a.shuffle[0, 10].join << '?'
+  #   assert_equal 'Sure.', bob.hey(remark), feedback(remark)
+  # end
+  #
+  # def test_talking_forcefully
+  #   remark = "Let's go make out behind the gym!"
+  #   assert_equal 'Whatever.', bob.hey(remark), feedback(remark)
+  # end
+  #
+  # def test_using_acronyms_in_regular_speech
+  #   remark = "It's OK if you don't want to go to the DMV."
+  #   assert_equal 'Whatever.', bob.hey(remark), feedback(remark)
+  # end
+  #
+  # def test_forceful_questions
+  #   remark = 'WHAT THE HELL WERE YOU THINKING?'
+  #   assert_equal 'Whoa, chill out!', bob.hey(remark), feedback(remark)
+  # end
+  #
+  # def test_shouting_numbers
+  #   remark = '1, 2, 3 GO!'
+  #   assert_equal 'Whoa, chill out!', bob.hey(remark), feedback(remark)
+  # end
 
   def test_only_numbers
     remark = '1, 2, 3'

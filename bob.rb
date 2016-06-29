@@ -4,7 +4,7 @@ class Bob
       "Whoa, chill out!"
     elsif  remark =~ /[\?]$/   # Find out if remark is asking a question
       "Sure."
-    elsif remark == ""
+    elsif remark == "" || remark == "   "
       'Fine. Be that way!'
     else
       "Whatever."

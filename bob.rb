@@ -2,9 +2,9 @@ class Bob
   def hey(remark)
     if remark.upcase == remark && remark != remark.downcase
       "Whoa, chill out!"
-    elsif  remark =~ /[\?]$/   # Find out if remark is asking a question
+    elsif  remark.end_with? "?"  # Find out if remark is asking a question
       "Sure."
-    elsif remark == "" || remark == "   "
+    elsif remark.strip.empty?
       'Fine. Be that way!'
     else
       "Whatever."
